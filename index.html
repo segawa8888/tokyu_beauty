@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Test_TokyuBeauty</title>
+    <meta name="description" content="TokyuBeauty" />
+    <meta name="keywords" content="東急 TokyuBeauty " />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:site_name" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:url" content="url" /> -->
+    <!-- <meta property="og:title" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:description" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:image" content="ogpのurl" /> -->
+    <!-- <meta name="twitter:card" content="summary"> -->
+    <!-- <meta name="twitter:description" content="TokyuBeauty"> -->
+
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <link rel="canonical" href="url" /> -->
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Noto+Sans+JP:wght@400;700&family=Readex+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+
+    <!-- Adobe Ffonts -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "dio1ogp",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://use.typekit.net/lhj6zpi.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <style>
+      @media screen and (max-width: 768px) {
+        .deep-scroll .hamburger_top span {
+            background-color: #4b4b46;
+        }
+        .menu{
+          transition: all 0.3s;
+        }
+        .deep-scroll .menu{
+          opacity: 0;
+        }
+        .l_header__logo{
+          position: relative;
+          top: -100px;
+          transition: all 0.3s;
+        }
+        .deep-scroll .l_header__logo {
+          top: 0;
+        }
+      }
+      @media screen and (min-width: 769px) {
+        .l_header {
+          transition: all 0.3s;
+        }
+        .l_header__logo {
+          position: relative;
+          top: -100px;
+          transition: all 0.3s;
+        }
+        .deep-scroll .l_header__logo {
+          top: 0;
+          display: block;
+          opacity: 1;
+        }
+        .deep-scroll .l_header {
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .deep-scroll .l_header .l_header__upper .l_header__r > a.insta {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(images/icon_instagram02.png);
+        }
+        .deep-scroll .l_header .l_header__upper .l_header__r > a.line {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(images/icon_line02.png);
+        }
+        .l_header .l_header__upper .l_header__r > a.insta img {
+          transition: all 0.3s;
+        }
+        .l_header .l_header__upper .l_header__r > a.line img {
+          transition: all 0.3s;
+        }
+        .deep-scroll .l_header .l_header__upper .l_header__r > a.insta img {
+          opacity: 0;
+        }
+        .deep-scroll .l_header .l_header__upper .l_header__r > a.line img {
+          opacity: 0;
+        }
+        .l_header .search {
+          transition: all 0.3s;
+        }
+        .deep-scroll .l_header .search::placeholder {
+          color: #d3d3d3 !important;
+        }
+        .deep-scroll .l_header .search:focus {
+          color: #000;
+        }
+        .deep-scroll .l_header .search {
+          width: 285px !important;
+          border-bottom: 1px solid #707070 !important;
+        }
+        .l_header .l_header__upper .l_header__r .search_wrap .icon img {
+          transition: all 0.3s;
+        }
+        .deep-scroll
+          .l_header
+          .l_header__upper
+          .l_header__r
+          .search_wrap
+          .icon {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(images/icon_search02.png);
+        }
+        .deep-scroll
+          .l_header
+          .l_header__upper
+          .l_header__r
+          .search_wrap
+          .icon
+          img {
+          opacity: 0;
+        }
+      }
+    </style>
+    <style>
+      main .sec_instagram .img{
+        width: 100%;
+      }
+      .sec_instagram .instagram{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: calc(220px * 3);
+        margin: 0 auto;
+      }
+      .sec_instagram .instagram a{
+        width: 220px;
+        height: 220px;
+      }
+      .sec_instagram .instagram a div{
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+      }
+      @media screen and (max-width: 990px) {
+        .sec_instagram .instagram{
+        width: calc(150px * 3);
+        }
+        .sec_instagram .instagram a{
+          width: 150px;
+          height: 150px;
+        }
+      }
+      @media screen and (max-width: 490px) {
+        .sec_instagram .instagram{
+          width: calc(100% + 30px);
+          margin-left: -15px;
+        }
+        .sec_instagram .instagram a{
+          width:calc(100% / 3);
+          height:120px;
+        }
+      }
+    </style>
+    <style>
+      .header__nav .header__nav_inner .search_wrap .search {
+          width: 100%;
+          border-bottom: 1px solid #fff!important;
+          margin-left: 10px;
+          padding-bottom: 10px;
+          color: #fff;
+      }
+      .fv_image {
+          min-width: 740px;
+      }
+      @media screen and (max-width: 1140px){
+        .fv_image {
+          min-width: 66%;
+          height: auto;
+        }
+      }
+      @media screen and (max-width: 768px){
+        .fv_image {
+          min-width:auto;
+          height: 68vw;
+        }
+      }
+      @media screen and (min-width: 768px){
+        .swiper {
+            overflow: visible!important;
+        }
+      }
+      @media screen and (max-width: 768px){
+        .swiper-wrapper {
+            justify-content: space-between;
+        }
+      }
+    </style>
+    
+  </head>
+
+  <body class="top">
+    <!-- <div class="btt" id="btt"></div> -->
+    <div class="announcement__bar">
+      <p>送料無料 1会計税込2,750円以上 ／ 最短当日発送 午前10時59分までのご注文</p>
+    </div>
+    <header class="l_header">
+      <div class="l_header__upper">
+        <div class="l_header__logo">
+          <a href="/">
+            <img src="images/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="l_header__r">
+          <div class="search_wrap">
+            <div class="icon">
+              <img src="images/icon_search01.png" alt="" />
+            </div>
+            <input class="search" type="text" placeholder="キーワードで探す" />
+            <ul style="display: none" class="tag">
+              <li><a href="#"># 東急</a></li>
+              <li><a href="#"># クレ・ド・ポーボーテ</a></li>
+              <li><a href="#">#スクランブルスクエア</a></li>
+              <li><a href="#">#+Q</a></li>
+              <li><a href="#"># SK-Ⅱ</a></li>
+              <li><a href="#">#ウェルネス</a></li>
+            </ul>
+          </div>
+          <p class="menu">MENU</p>
+          <button
+            class="header__hamburger hamburger_top_page hamburger_top hamburger"
+            id="js-hamburger"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ハンバーガーメニュー -->
+      <nav class="header__nav nav" id="js-nav">
+        <div class="header__nav_logo">
+          <a href="/"><img src="images/logo-w.png" alt="" /></a>
+        </div>
+        <div class="header__nav_inner">
+          <div class="search_wrap">
+            <img src="images/icon_search01.png" alt="" /><input
+              class="search"
+              type="text"
+              placeholder="キーワードで探す"
+            />
+          </div>
+          <ul class="tag">
+            <li><a href=""># 東急</a></li>
+            <li><a href=""># クレ・ド・ポーボーテ</a></li>
+            <li><a href="">#スクランブルスクエア</a></li>
+            <li><a href="">#+Q</a></li>
+            <li><a href=""># SK-Ⅱ</a></li>
+            <li><a href="">#ウェルネス</a></li>
+          </ul>
+          <h2><a href="">All Articles</a></h2>
+          <h2>Feature</h2>
+          <ul class="header__nav_list">
+            <li><a href="">メイクアップレッスン</a></li>
+            <li><a href="">ビューティーパトロール</a></li>
+          </ul>
+          <h2>Special Issue</h2>
+          <ul class="header__nav_list">
+            <li><a href="">Oz mall × TOKYU DEPARTMENT STORE</a></li>
+            <li><a href="">QUI × TOKYU DEPARTMENT STORE</a></li>
+          </ul>
+          <h2>Service</h2>
+          <ul class="header__nav_list">
+            <li><a href="search.html">ブランド検索 </a></li>
+            <li><a href="/">電話注文</a></li>
+            <li><a href="https://www.tokyu-dept.co.jp/ec/cmShopTopPageI.html">コスメ＆ビューティーネットショッピング</a></li>
+            <li><a href="http://demo.hiup.jp/yatsuda/tokyu-beauty/tokyu-dept.co.jp/ec/cmShopTopPageJ.html">ネットショッピング店頭受け取りサービス</a></li>
+          </ul>
+
+          <ul class="header__nav_sns">
+            <h2>SNS</h2>
+            <li>
+              <a href=""><img src="images/icon_instagram01.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/icon_line01.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+    <div class="l_header__lower">
+      <ul class="breadcrumb">
+        <!-- <li><a href="">TOP</a></li>
+        <li><a href=""></a></li> -->
+      </ul>
+      <nav class="l_header__nav">
+        <ul class="l_header__list">
+          <li class="l_header__item">
+            <button class="l_header__nav_button">Brand List</button>
+          </li>
+          <li class="l_header__item">
+            <button class="l_header__nav_button">All Articles</button>
+          </li>
+          <li class="l_header__item">
+            <button class="l_header__nav_button">Feature</button>
+          </li>
+          <li class="l_header__item">
+            <button class="l_header__nav_button">Special Issue</button>
+          </li>
+          <li class="l_header__item">
+            <button class="l_header__nav_button">Service</button>
+          </li>
+        </ul>
+        <div class="search_wrap">
+          <img src="images/icon_search01.png" alt="" />
+          <input class="search" type="text" placeholder="キーワードで探す" />
+        </div>
+      </nav>
+    </div>
+
+    <div class="fv">
+      <div class="fv_bg">
+        <div class="fv_logo">
+          <h2>
+            <img
+              src="images/tokyubeauty.png"
+              alt="TOKYU BEAUTY DEPARTMENT STORE"
+            />
+          </h2>
+        </div>
+      <div class="swiper swiper_fv">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="fv_contents">
+              <div class="fv_image">
+                <a href="">
+                <img src="./images/top__slide01.jpg" alt="素肌がキレイに見える〈PAUL&JOE BEAUTE (ポール アンド ジョー ボーテ)〉のオールインワン・クッションファンデをおすすめ！">
+                </a>
+              </div>
+              <div class="fv_content">
+                <a href="">
+                <span class="fv-next_arrow sp">
+                  <img src="./images/fv_arrow.png" alt="矢印">
+                </span>
+                <span class="fv_arrival">NEW</span>
+                <p class="fv_text">素肌がキレイに見える<br>
+                  〈PAUL&JOE BEAUTE (ポール アンド ジョー ボーテ)〉のオールインワン・クッションファンデをおすすめ！</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="fv_contents">
+              <div class="fv_image">
+                <a href="">
+                <img src="./images/top__slide01.jpg" alt="素肌がキレイに見える〈PAUL&JOE BEAUTE (ポール アンド ジョー ボーテ)〉のオールインワン・クッションファンデをおすすめ！">
+                </a>
+              </div>
+              <div class="fv_content">
+                <a href="">
+                <span class="fv-next_arrow sp">
+                  <img src="./images/fv_arrow.png" alt="矢印">
+                </span>
+                <span class="fv_arrival">NEW</span>
+                <p class="fv_text">素肌がキレイに見える<br>
+                  〈PAUL&JOE BEAUTE (ポール アンド ジョー ボーテ)〉のオールインワン・クッションファンデをおすすめ！</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="fv_contents">
+              <div class="fv_image">
+                <a href="">
+                <img src="./images/top__slide01.jpg" alt="素肌がキレイに見える〈PAUL&JOE BEAUTE (ポール アンド ジョー ボーテ)〉のオールインワン・クッションファンデをおすすめ！">
+                </a>
+              </div>
+              <div class="fv_content">
+                <a href="">
+                <span class="fv-next_arrow sp">
+                  <img src="./images/fv_arrow.png" alt="矢印">
+                </span>
+                <span class="fv_arrival">NEW</span>
+                <p class="fv_text">素肌がキレイに見える<br>
+                  〈PAUL&JOE BEAUTE (ポール アンド ジョー ボーテ)〉のオールインワン・クッションファンデをおすすめ！</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="fv_contents">
+              <div class="fv_image">
+                <a href="">
+                <img src="./images/top__slide01.jpg" alt="素肌がキレイに見える〈PAUL&JOE BEAUTE (ポール アンド ジョー ボーテ)〉のオールインワン・クッションファンデをおすすめ！">
+                </a>
+              </div>
+              <div class="fv_content">
+                <a href="">
+                <span class="fv-next_arrow sp">
+                  <img src="./images/fv_arrow.png" alt="矢印">
+                </span>
+                <span class="fv_arrival">NEW</span>
+                <p class="fv_text">素肌がキレイに見える<br>
+                  〈PAUL&JOE BEAUTE (ポール アンド ジョー ボーテ)〉のオールインワン・クッションファンデをおすすめ！</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fv_controller">
+          <div class="fv_pagination"></div>
+          <span class="fv-next_arrow pc">
+            <img src="./images/fv_arrow.png" alt="矢印">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- <div class="intro">
+      <div class="inner">
+        <div class="swiper_intro_wrap">
+          <div class="swiper swiper_intro">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="article.html" class="swiper_link">
+                  <img src="images/banner01.jpg" alt="" class="swiper-img" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="article.html" class="swiper_link">
+                  <img src="images/banner02.jpg" alt="" class="swiper-img" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="article.html" class="swiper_link">
+                  <img src="images/banner01.jpg" alt="" class="swiper-img" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="article.html" class="swiper_link">
+                  <img src="images/banner02.jpg" alt="" class="swiper-img" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="sec_index">
+      <div class="inner">
+          <ul>
+            <li><a href="#sec_new">What’s New<br class="sp-only"><span>記事コンテンツ</span></a></li>
+            <li><a href="#sec_feature">Feature<br class="sp-only"><span>特集</span></a></li>
+            <li><a href="#sec_news">Shop News<br class="sp-only"><span>店舗イベント情報</span></a></li>
+            <li><a href="#sec_brands">Brand List<br class="sp-only"><span>ブランドリスト</span></a></li>
+            <li><a href="#sec_item">Pick up Item<br class="sp-only"><span>新作商品</span></a></li>
+            <li><a href="#instagram">Instagram<br class="sp-only"><span>インスタグラム</span></a></li>
+            <li><a href="#sec_issue">Special Issue<br class="sp-only"><span>スペシャル特集</span></a></li>
+            <li><a href="#sec_welness">Wellness<br class="sp-only"><span>ウェルネス</span></a></li>
+            <li><a href="#sec_service">Service<br class="sp-only"><span>サービス</span></a></li>
+          </ul>
+      </div>
+    </div> -->
+    		<!--reco30はbody.html内のjsに記載があります。ECサイト内の1I00000000というカテゴリからデータを引っ張ってきて、naviplusという外部サイトでhtml、cssを構築しています。コードはnaviplus.html、naviplus.cssをご覧ください-->
+
+    <section class="campaign" id="campaign">
+      <div class="inner">
+      <h2 class="section_title">Campaign</h2>
+      <p class="section_text">お得なイベント情報やキャンペーンのお知らせ</p>
+      <div class="campaign-slide_container">
+        <div class="swiper campaign_swiper">
+          <ul class="campaign__cards campaign-cards swiper-wrapper">
+            <li class="campaign__card campaign-card campaign_slide swiper-slide">
+              <a href="">
+                <div class="campaign-card__img">
+                  <img src="./images/campaign01.jpg" alt="sales">
+                </div>
+              <div class="campaign-card__content">
+                <p class="campaign-card__text">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+              </div>
+            </a>
+              </li>
+              <li class="campaign__card campaign-card campaign_slide swiper-slide">
+                <a href="">
+              <div class="campaign-card__img">
+                <img src="./images/campaign02.jpg" alt="cosme-tokyo">
+              </div>
+              <div class="campaign-card__content">
+                <p class="campaign-card__text">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+              </div>
+            </a>
+              </li>
+              <li class="campaign__card campaign-card campaign_slide swiper-slide">
+                <a href="">
+              <div class="campaign-card__img">
+                <img src="./images/campaign03.jpg" alt="happy halloween">
+              </div>
+              <div class="campaign-card__content">
+                <p class="campaign-card__text">タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+              </div>
+            </a>
+            </li>
+        </ul>
+      </div>
+        <div class="campaign_arrow campaign_prev">
+          <img src="./images/campaign_prev.png" alt="prev">
+        </div>
+        <div class="campaign_arrow campaign_next">
+          <img src="./images/campaign_next.png" alt="next">
+        </div>
+      </div>
+      </div>
+    </section>
+    
+    <section class="sec_item" id="sec_item">
+      <h2 class="section_title">Pick up Items</h2>
+      <div class="inner">
+
+        <div id="reco30"></div>
+      </div>
+      <div class="btn"><a href="https://www.tokyu-dept.co.jp/ec/cmShopTopPageI.html" target="_blank">ネットショッピングはこちら</a></div>
+    </section>
+    <script type="text/javascript" src="//r.snva.jp/javascripts/reco/2/sna.js?k=1MxwV0TiXlFUx"></script>
+    <script type="text/javascript">
+    __snahost = "r.snva.jp";
+    recoConstructer({
+      k: "1MxwV0TiXlFUx",
+      recommend: {
+        rule: {
+          tmpl: 30
+          , target_id: "reco30"
+          , category: "1I00000000"
+        }
+      }
+    });
+    </script>
+
+    <section class="sec_brands" id="sec_brands">
+      <h2 class="section_title">Brand Lists</h2>
+      <div class="inner">
+        <ul class="brands-wrap">
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/scsq/shop/detail.html?shopcode=dior" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_dior.jpg" alt="dior">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/kichijouji/shop/detail.html?shopcode=yvessantlaurent" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_ysl.jpg" alt="ysl">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/tama-plaza/shop/detail.html?shopcode=cosmedecorte" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_decorte.jpg" alt="decorte">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/scsq/shop/detail.html?shopcode=nars" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_nars.jpg" alt="nars">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/scsq/shop/detail.html?shopcode=addiction" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_addiction.jpg" alt="addiction">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/kichijouji/shop/detail.html?shopcode=lunasol" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/kichijouji/logo/lunasol.jpg" alt="lunasol">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/scsq/shop/detail.html?shopcode=lauramercier" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_lauramercier.jpg" alt="lauramercier">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/scsq/shop/detail.html?shopcode=suqqu" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_suqqu.jpg" alt="suqqu">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/scsq/shop/detail.html?shopcode=ipsa" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_ipsa.jpg" alt="ipsa">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/scsq/shop/detail.html?shopcode=shiseido" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_shiseido.jpg" alt="shiseido">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/shinqs/floor/detail.html?shopcode=kanebo" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_kanebo.jpg" alt="kanebo">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/shinqs/floor/detail.html?shopcode=snidelbeauty" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/shinqs/floor/images/1f/snidelbeauty_logo.jpg" alt="snidelbeauty">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/shinqs/floor/detail.html?shopcode=pola" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/shinqs/floor/images/b1f/pola_logo.jpg" alt="pola">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/shinqs/floor/detail.html?shopcode=laprairie" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/shinqs/floor/images/b1f/laprairie_logo.jpg" alt="laprairie">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/sapporo/shop/detail.html?shopcode=1rmk" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/shinqs/floor/images/b1f/rmk_logo.gif" alt="rmk">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/shinqs/floor/detail.html?shopcode=etvos" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/shinqs/floor/images/b1f/etvos_logo.jpg" alt="etvos">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/tama-plaza/shop/detail.html?shopcode=esteelauder" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_esteelauder.jpg" alt="esteelauder">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/scsq/shop/detail.html?shopcode=celvoke" target="_blank">
+              <img src="https://www.tokyu-dept.co.jp/scsq/images/shoplogo/beauty_celvoke.jpg" alt="celvoke">
+            </a>
+          </li>
+        </ul>
+        <div class="btn"><a href="/tokyudeptbeauty/search.html">もっと見る</a></div>
+        
+      </div>
+    </section>
+    <section class="sec_new bg_be">
+      <h2 class="section_title">What’s New</h2>
+      <div class="inner">
+        <ul class="c_card__list">
+          <li class="c_card__item scroll-fade-up">
+            <a href="article.html" class="c_card__link">
+              <div class="imgbox">
+                <img src="images/new01.jpg" alt="" />
+              </div>
+              <div class="textbox">
+                <h3>
+                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                </h3>
+                <div class="lower">
+                  <span class="day">2022.12.01</span
+                  ><span class="new">NEW</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="c_card__item scroll-fade-up">
+            <a href="article.html" class="c_card__link">
+              <div class="imgbox">
+                <img src="images/new02.jpg" alt="" />
+              </div>
+              <div class="textbox">
+                <h3>
+                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                </h3>
+                <div class="lower">
+                  <span class="day">2022.12.01</span
+                  ><span class="new">NEW</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="c_card__item scroll-fade-up">
+            <a href="article.html" class="c_card__link">
+              <div class="imgbox">
+                <img src="images/new03.jpg" alt="" />
+              </div>
+              <div class="textbox">
+                <h3>
+                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                </h3>
+                <div class="lower"><span class="day">2022.12.01</span></div>
+              </div>
+            </a>
+          </li>
+          <li class="c_card__item scroll-fade-up">
+            <a href="article.html" class="c_card__link">
+              <div class="imgbox">
+                <img src="images/new04.jpg" alt="" />
+              </div>
+              <div class="textbox">
+                <h3>
+                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                </h3>
+                <div class="lower"><span class="day">2022.12.01</span></div>
+              </div>
+            </a>
+          </li>
+          <li class="c_card__item scroll-fade-up">
+            <a href="article.html" class="c_card__link">
+              <div class="imgbox">
+                <img src="images/new05.jpg" alt="" />
+              </div>
+              <div class="textbox">
+                <h3>
+                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                </h3>
+                <div class="lower"><span class="day">2022.12.01</span></div>
+              </div>
+            </a>
+          </li>
+          <li class="c_card__item scroll-fade-up">
+            <a href="article.html" class="c_card__link">
+              <div class="imgbox">
+                <img src="images/new06.jpg" alt="" />
+              </div>
+              <div class="textbox">
+                <h3>
+                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                </h3>
+                <div class="lower"><span class="day">2022.12.01</span></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="btn"><a href="archive.html">もっと見る</a></div>
+      </div>
+    </section>
+
+    <section class="sec_feature" id="sec_feature">
+      <h2 class="section_title">Feature</h2>
+      <div class="inner">
+        <ul>
+          <li class="scroll-fade-up">
+            <a href="/tokyudeptbeauty/horoscope.html">
+              <h3 title="ビューティー占い">
+                <img src="/NEWhoroscope/feature-title.png" alt="HOROSCOPE" class="beauty_text">
+                <span>ビューティー占い</span>
+              </h3>
+              <img src="https://www.tokyu-dept.co.jp/NEWhoroscope/6_otome.JPG" alt="HOROSCOPE" class="beauty_img">
+              <p>
+                沙木貴咲の<br>
+                12星座別ビューティー占い
+              </p>
+            </a>
+          </li>
+          <li class="scroll-fade-up">
+            <a href="/tokyudeptbeauty/staffvoice.html">
+              <h3 title="スタッフボイス">
+                <img src="https://www.tokyu-dept.co.jp/tokyudeptbeauty/images/voice/feature-title.png" alt="STAFF VOICE" class="beauty_text">
+                <span>スタッフボイス</span>
+              </h3>
+              <img src="https://www.tokyu-dept.co.jp/tokyudeptbeauty/images/voice/SH_001.JPG" alt="STAFF VOICE" class="beauty_img">
+              <p>
+                渋谷から最旬の“声”をお届けする<br>
+                「Staff Voice」
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec_news" id="sec_news">
+      <h2 class="section_title">Shop News</h2>
+      <!--<div class="search_wrap search_wrap_button">
+        <img src="/tokyudeptbeauty/images/icon_home.png" alt="">
+        <button class="search" type="text">店舗で絞り込む</button>
+        <ul style="display: none" class="panel_inner">
+          <li class="panel_item">
+            <a href="">＋Q（プラスク）ビューティー<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+          </li>
+          <li class="panel_item">
+            <a href="">渋⾕ヒカリエ Shinqs<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+          </li>
+          <li class="panel_item">
+            <a href="">吉祥寺店<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+          </li>
+          <li class="panel_item">
+            <a href="">たまプラーザ店<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+          </li>
+          <li class="panel_item">
+            <a href="">さっぽろ店<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+          </li>
+        </ul>
+      </div>-->
+      <div class="inner">
+        <ul>
+ 
+        
+          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+              <a href="/shinqs/shop/popup/detail.html?id=4318" target="_blank">
+              <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/shinqs/shop/popup/images/popup_230728_b1event_04.jpg" alt=""></div>
+              <div class="textbox">
+                <span class="shop">渋谷ヒカリエ ShinQs</span>
+                <p>樹木との共生をテーマにしたスキン＆マインドブランド<br>〈BAUM〉POP UP SHOP </p>
+                <div class="lower">
+                  <span class="day">23.07.26</span>
+    
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+            
+            <a href="/shinqs/shop/news/detail.html?id=2866" target="_blank">
+
+              <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/shinqs/shop/news/images/news_230906_styletable_01.jpg" alt=""></div>
+              <div class="textbox">
+
+        <span class="shop">渋谷ヒカリエ ShinQs</span>
+
+                <p>9月16日(土)〈スタイルテーブル〉がイベントを開催<br>〜エシカルワークショップ〜 バスボムをつくろう！ </p>
+                <div class="lower">
+                  <span class="day">23.09.06</span>
+    
+                </div>
+              </div>
+            </a>
+          </li>          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+            
+<a href="/shinqs/shop/news/detail.html?id=2884" target="_blank">
+
+              <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/shinqs/shop/news/images/news_230830_aiam_01.jpg" alt=""></div>
+              <div class="textbox">
+
+        <span class="shop">渋谷ヒカリエ ShinQs</span>
+
+                <p>そのとき選んだ香り、それがあなたの人生のワンシーン<br>ビューティーブランド〈アイアム〉NEW OPEN！ </p>
+                <div class="lower">
+                  <span class="day">23.08.30</span>
+    
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+            
+<a href="/kichijouji/news/detail.html?id=1456" target="_blank">              
+
+              <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/kichijouji/220928/line_cosmecoupon.jpg" alt=""></div>
+              <div class="textbox">
+
+        <span class="shop">吉祥寺店</span>
+
+                <p>東急百貨店公式LINEアカウント友だち限定 9月のコスメクーポン </p>
+                <div class="lower">
+                  <span class="day">23.08.30</span>
+    
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+            
+<a href="/tama-plaza/news/detail.html?id=156" target="_blank">              
+
+              <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/tama-plaza/230914/shop_kindcare.jpg" alt=""></div>
+              <div class="textbox">
+
+        <span class="shop">たまプラーザ店</span>
+
+                <p>〈KINDCARE（カインドケア）〉敬老の日キャンペーン </p>
+                <div class="lower">
+                  <span class="day">23.09.10</span>
+    
+                  <span class="new">NEW</span>
+    
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+            
+<a href="/sapporo/news/detail.html?id=27" target="_blank">              
+
+              <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/image/20230915_pointup_bn.jpg" alt=""></div>
+              <div class="textbox">
+
+        <span class="shop">さっぽろ店</span>
+
+                <p>【TOKYU CARD ClubQカード会員さま限定】ポイントアップ開催 </p>
+                <div class="lower">
+                  <span class="day">23.09.07</span>
+    
+                </div>
+              </div>
+            </a>
+          </li>          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+            
+<a href="/sapporo/news/detail.html?id=910" target="_blank">              
+
+              <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/image/20230801_ikoikocosme400400.jpg" alt=""></div>
+              <div class="textbox">
+
+        <span class="shop">さっぽろ店</span>
+
+                <p>【毎月1日から5日は500円OFFクーポン配信！】ウキウキ イコイコ♪ コスメデイズ </p>
+                <div class="lower">
+                  <span class="day">23.07.26</span>
+    
+                </div>
+              </div>
+            </a>
+          </li>          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+            
+<a href="/sapporo/news/detail.html?id=911" target="_blank">              
+
+              <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/image/cosme_tokutoku_400.jpg" alt=""></div>
+              <div class="textbox">
+
+        <span class="shop">さっぽろ店</span>
+
+                <p>【毎月19日は1,000円OFFクーポン配信】トクトク コスメ Special Day </p>
+                <div class="lower">
+                  <span class="day">23.08.12</span>
+    
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--<div class="btn"><a href="">もっと見る</a></div>-->
+    </section>
+<!-- 
+    <section class="Instagram">
+      <style>
+        .ecbn-selection-widget a {
+            background: transparent;
+            font-size: 100%;
+            margin: 0;
+            padding: 0;
+            vertical-align: baseline;
+            display: flex;
+            justify-content: center;
+        }
+        </style>
+
+        <div class="vsm-tile">
+          <div id="instagram" class="ecbn-selection-widget" data-type="selection-tile" data-selection="cosme-beauty" data-userid="e4080401-1409-4721-a62b-3919e62d2aeb"></div>
+          <script type="text/javascript" src="https://www.visumo.jp/MediaManagement/WebApi/ecbn-selection-widget.js" async="async"></script>
+        </div>
+
+    </section> -->
+
+    <section class="sec_issue">
+      <h2 class="section_title">Special Issue</h2>
+      <div class="inner">
+        <ul>
+          <li class="scroll-fade-up">
+            <a href="">
+              <div class="imgbox">
+                <img src="images/ozmall_logo.png" alt="OZmall" class="ozmall_logo" />
+                <img src="images/Issue01.png" alt="" class="issue_img" />
+              </div>
+              <div class="textbox">
+                <p>
+                  自分へ癒しと労りケアを。カラダにいい・嬉しいコト＆モノをオズモールと東急百貨店でいっしょに提案します。<span
+                    >詳しく見る ＞</span
+                  >
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="scroll-fade-up">
+            <a href="">
+              <div class="imgbox">
+                <img src="images/qui_logo.png" alt="QUI" class="qui_logo" />
+                <img src="images/Issue02.png" alt="" class="issue_img" />
+              </div>
+              <div class="textbox">
+                <p>
+                  才能豊かなアーティストたちの作品やメイクアップが、新たな美の概念を提案します。<span
+                    >詳しく見る ＞</span
+                  >
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec_welness">
+      <div class="inner">
+        <div class="sec_welness__img">
+          <picture>
+            <source srcset="images/wellness.png" media="(min-width: 769px)" />
+            <source
+              srcset="images/wellness_sp.png"
+              media="(max-width: 768px)"
+            />
+            <img src="images/wellness.png" alt="" />
+          </picture>
+          <p class="sec_welness__text pc">
+            今の美しさにとらわれず、<br>
+            “未来の自分をよりよくする”ために。<br>
+            心と体を穏やかな状態に導くウェルネス特集で、より良い毎日をご提案します。
+          </p>
+        </div>
+      </div>
+      <p class="sec_welness__text sp">
+        今の美しさにとらわれず、“未来の自分をよりよくする”ために。<br
+          class="sp_none"
+        />
+        心と体を穏やかな状態に導くウェルネス特集で、より良い毎日をご提案します。
+      </p>
+
+      <div class="swiper_welness_wrap">
+        <div class="swiper swiper_wellness">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/welness__01.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                   スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/welness__02.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                   スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/welness__03.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                   スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/welness__01.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                   スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/welness__02.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                   スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/welness__03.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                   スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/welness__01.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                   スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/welness__02.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                   スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/welness__03.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                   スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div>
+            <!-- <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/wellness10.png" alt="" />
+                  <p></p>
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                    スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div> -->
+            <!-- <div class="swiper-slide">
+              <a href="article.html">
+                <div class="imgbox">
+                  <img src="images/wellness11.png" alt="" />
+                  <p></p>
+                </div>
+                <div class="textbox">
+                  <h3>きれいになりたい</h3>
+                  <p>
+                    スキンケアからメイクアップなど百貨店オススメアイテムをご紹介します。
+                  </p>
+                  <span>詳しく見る ＞</span>
+                </div>
+              </a>
+            </div> -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec_service">
+      <h2 class="section_title">Service</h2>
+      <p class="sec_service__text">東急百貨店でのお買い物をもっと便利に</p>
+      <div class="inner">
+        <ul>
+          <li>
+            <a href="search.html">
+              <div class="imgbox">
+                <img src="images/icon_search02.png" alt="" class="icon" />
+              </div>
+              <div class="textbox">
+                <h3>ブランド検索<img src="images/arrow-r.png" alt="" /></h3>
+                <p>東急百貨店各店の取り扱い化粧品ブランドをキーワードで検索</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="imgbox">
+                <img src="images/icon_phone.png" alt="" class="icon" />
+              </div>
+              <div class="textbox">
+                <h3>電話注文<img src="images/arrow-r.png" alt="" /></h3>
+                <p>
+                  TOKYU CARD ClubQカード会員さま限定の電話注文サービスのご案内
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tokyu-dept.co.jp/ec/cmShopTopPageI.html">
+              <div class="imgbox">
+                <img src="images/icon_bag.png" alt="" class="icon" />
+              </div>
+              <div class="textbox">
+                <h3>
+                  コスメ＆ビューティー<br class="sp_none" />
+                  ネットショッピング<img src="images/arrow-r.png" alt="" />
+                </h3>
+                <p>いつでもインターネットでコスメが買える</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="tokyu-dept.co.jp/ec/cmShopTopPageJ.html">
+              <div class="imgbox">
+                <img src="images/icon_bag.png" alt="" class="icon" />
+              </div>
+              <div class="textbox">
+                <h3>
+                  ネットショッピング<br class="sp_none" />
+                  店頭受け取りサービス<img src="images/arrow-r.png" alt="" />
+                </h3>
+                <p>対象ブランド・受け取り店舗拡大中！</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="l_footer">
+      <div class="inner">
+        <ul>
+          <li>
+            <h3>About</h3>
+            <p>
+              「東急ビューティー」は、スキンケアやベースメイクなどのコスメニュースはもちろん、ビューティーコンサルタントがシェアする旬のメイクアップ術、体と心をていねいに整えるウェルネスアイテムなど、“美と健康”にまつわる情報をお届けするポータルサイト。渋谷スクランブルスクエア6階、渋谷ヒカリエShinQsの最新ショップ情報もご紹介します。
+            </p>
+          </li>
+          <li>
+            <h3>Company</h3>
+            <ul class="l_footer__list">
+              <li class="l_footer__item">
+                <a class="l_footer__link" href="">東急百貨店</a>
+              </li>
+              <li class="l_footer__item">
+                <a class="l_footer__link" href="">企業情報</a>
+              </li>
+              <li class="l_footer__item">
+                <a class="l_footer__link" href="">プライバシーポリシー</a>
+              </li>
+              <li class="l_footer__item">
+                <a class="l_footer__link" href=""
+                  >TOKYU CARD ClubQに関するお問い合わせ</a
+                >
+              </li>
+              <li class="l_footer__item">
+                <a class="l_footer__link" href="">環境問題に関する取り組み</a>
+              </li>
+              <li class="l_footer__item">
+                <a class="l_footer__link" href="">お問合わせ</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>
+              <a href=""><img src="images/logo-w.png" alt="" /></a>
+            </h3>
+            <div class="l_footer__sns">
+              <a href=""><img src="images/icon_instagram01.png" alt="" /></a>
+              <a href=""><img src="images/icon_line01.png" alt="" /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div style="display: none" class="ovartal-search"></div>
+    <!-- js -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+    ></script>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/custom.js" defer></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="./css/swiper-bundle.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      $(window).load(function() {
+        $.ajax({
+          type: "GET",
+          url: 'https://graph.facebook.com/v16.0/17841452001552174?fields=name,media.limit(9){caption,media_url,thumbnail_url,permalink,like_count,comments_count,media_type}&access_token=EAASewlpeoMcBALRpUjRJ7zLD0Qpt4ihUe9VlYGi2lEC0WwjrsrxM11HpdXPjuLPBAaWnisHZA99VUfTuX9vAxWqlHNZACoC6GEOKggse1v3OSAcOKRhoMBChzuo3XYkKfsOwUhoi4HSuFIH55QXOD0SfF5XofSZAVasTqzt6OJxTEyT3JsLgd678hbigCZCdgSDTZC83IrQZDZD',
+          dataType: "json",
+        }).done(function(json) {
+          let ig = json.media.data;
+          let html = "";
+          for (let i = 0; i < ig.length; i++) {
+            let link = ig[i].permalink;
+            let image;
+            if (!ig[i].thumbnail_url) {
+              image = ig[i].media_url; // video
+            } else {
+              image = ig[i].thumbnail_url; // image
+            }
+            html +=
+              '<a target="_blank" href="' + link + '"><div style="background-image: url(' + image + ');"></div></a>';
+          }
+          $(".sec_instagram .instagram").append(html);
+        });
+      });
+      </script>
+  </body>
+</html>

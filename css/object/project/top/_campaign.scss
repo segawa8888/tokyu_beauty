@@ -1,0 +1,100 @@
+.campaign-slide_container {
+    position: relative;
+    margin-top: 45px;
+}
+
+.campaign-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.campaign__card:nth-child(n+2) {
+    margin-top: 0;
+}
+
+//1番目以降
+.campaign__card:not(:nth-child(3n + 1)) {
+    margin-left:75px;
+}
+
+.campaign-cards .campaign__card {
+    width:325px;
+}
+
+//4枚目以降
+.campaign__card:nth-child(n+4){
+    margin-top: 75px;
+}
+
+.campaign-card {
+    z-index:2;
+    &:hover {
+        .campaign-card__img img {
+            transform: scale(1.1);
+        }
+        .campaign-card__text {
+            opacity: 0.7;
+        }  
+    }
+}
+
+.campaign-card__img {
+    overflow: hidden;
+    aspect-ratio: 325 / 216;
+}
+
+.campaign-card__img img {
+    transition: 0.3s;
+    width: 100%;
+    height:auto;
+}
+
+.campaign-card__content {
+    margin-top: 39px;
+}
+
+.campaign-card__text {
+    font-size: 14px;
+    line-height: calc(19/14);
+    font-weight: 700;
+    color: #707070;
+}
+
+.campaign_arrow {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+
+    .campaign__card:nth-child(n+2) {
+            margin-top:initial;
+    }
+
+    //1番目以降
+    .campaign__card:not(:nth-child(3n + 1)) {
+            margin-left:initial;
+    }
+
+    //4枚目以降
+    .campaign__card:nth-child(n+4){
+            margin-top: initial;
+    }
+
+    .campaign_arrow {
+        display: block;
+        position: absolute;
+        top:40%;
+        transform: translateY(-50%);
+        width:40px;
+        height:40px;
+        z-index: 10;
+    }
+
+    .campaign_prev {
+        left:-16px;
+    }
+
+    .campaign_next {
+        right:-16px;
+    }
+}

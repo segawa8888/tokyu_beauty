@@ -1,0 +1,218 @@
+@media screen and (max-width: 576px) {
+    .visible-sm {
+      display: inline;
+    }
+  }
+  
+  .visible-se {
+    display: none;
+  }
+  
+footer .notification {
+    margin-bottom: 100px;
+    max-width: 868px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media screen and (max-width: 576px) {
+    footer .notification {
+    }
+  }
+  
+  footer .notification .inner-content {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -ms-flex-align: stretch;
+    -webkit-box-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    footer .notification .inner-content {
+      display: block;
+      padding-top: 50px;
+    }
+  }
+  
+  footer .notification .inner-content > div {
+    width: calc((100% - 50px) / 2);
+  }
+  @media screen and (max-width: 768px) {
+    footer .notification .inner-content > div {
+        width:100%;
+      }
+  }
+  
+  footer .notification .inner-content .telorder-card {
+    border: 1px solid #3e3a39;
+  }
+  
+  @media screen and (max-width: 768px) {
+    footer .notification .inner-content .telorder-card {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  footer .notification .inner-content .telorder-card h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #717071;
+    color: #ffffff;
+  }
+  
+  @media screen and (max-width: 576px) {
+    footer .notification .inner-content .telorder-card h3 {
+      font-size: 16px;
+    }
+  }
+  
+  footer .notification .inner-content .telorder-card .number {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-bottom: 1px solid #3e3a39;
+    margin-bottom: 25px;
+  }
+  
+  footer .notification .inner-content .telorder-card .number span {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.28em;
+    margin-bottom: 20px;
+  }
+  
+  footer .notification .inner-content .telorder-card .number a {
+    font-size: 32px;
+    letter-spacing: 0.05em;
+  }
+  
+  @media screen and (max-width: 375px) {
+    footer .notification .inner-content .telorder-card .number a {
+      font-size: 28px;
+    }
+  }
+  
+  footer .notification .inner-content .telorder-card p {
+    margin-left: 35px;
+    margin-right: 35px;
+    font-size: 12px;
+    text-align: left;
+    letter-spacing: 0.15em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  footer .notification .inner-content .notification-card {
+    background-color: #d9d9da;
+  }
+  
+  @media screen and (max-width: 576px) {
+    footer .notification .inner-content .notification-card {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    footer .notification .inner-content .notification-card:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  
+  footer .notification .inner-content .notification-card:last-child p {
+    padding-bottom: 15px;
+  }
+  
+  footer .notification .inner-content .notification-card h3 {
+    padding-top: 20px;
+    padding-bottom: 19px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-bottom: solid 1px #ffffff;
+    margin-bottom: 30px;
+  }
+  
+  @media screen and (max-width: 576px) {
+    footer .notification .inner-content .notification-card h3 {
+      font-size: 16px;
+    }
+  }
+  
+  footer .notification .inner-content .notification-card p {
+    margin-left: 35px;
+    margin-right: 35px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    line-height: 1.5;
+    padding-bottom: 30px;
+  }
+  
+  footer .notification .inner-content .notification-card p span {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  footer .notification .inner-content .notification-card p span:last-child {
+    margin-bottom: 0;
+  }
+  
+  footer .notification .inner-content .notification-card p small {
+    display: block;
+    margin-top: 15px;
+  }
+  
+  footer .notification .inner-content .notification-card .btn-area {
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-bottom: 30px;
+  }
+  
+  footer .notification .inner-content .notification-card .btn-area a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    background: url(../images/sekiya-arrow.svg) no-repeat right 15px center #ffffff;
+    background-size: 12px;
+    padding-right: 30px;
+  }
+  
+  @media screen and (max-width: 375px) {
+    footer .notification .inner-content .notification-card .btn-area a {
+      background-size: 12px;
+    }
+  }
+  
+  footer .notification .inner-content .notification-card .btn-area a:last-child {
+    margin-bottom: 0px;
+  }
+  
+  footer .notification .inner-content .notification-card .btn-area a img {
+    height: 40px;
+    width: auto;
+  }
+  
+  footer .notification .inner-content .notification-card .btn-area a p {
+    font-size: 13px;
+    margin-right: 0;
+    margin-left: 10px;
+    color: #717071;
+    letter-spacing: 0.18em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }

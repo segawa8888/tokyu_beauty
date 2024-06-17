@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Test_TokyuBeauty</title>
+    <meta name="description" content="TokyuBeauty" />
+    <meta name="keywords" content="東急 TokyuBeauty " />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:site_name" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:url" content="url" /> -->
+    <!-- <meta property="og:title" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:description" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:image" content="ogpのurl" /> -->
+    <!-- <meta name="twitter:card" content="summary"> -->
+    <!-- <meta name="twitter:description" content="TokyuBeauty"> -->
+
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <link rel="canonical" href="url" /> -->
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Noto+Sans+JP:wght@400;700&family=Readex+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+
+    <!-- Adobe Ffonts -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "dio1ogp",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://use.typekit.net/lhj6zpi.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- js -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+      defer
+    ></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/custom.js" defer></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+      .header__nav .header__nav_inner .search_wrap .search {
+          width: 100%;
+          border-bottom: 1px solid #fff;
+          margin-left: 10px;
+          padding-bottom: 10px;
+          color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+  <div class="page">
+    <div class="btt" id="btt"></div>
+    <header class="l_header">
+      <div class="l_header__upper">
+        <div class="l_header__logo">
+          <a href="/">
+            <img src="images/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="l_header__r">
+          <div class="search_wrap">
+            <div class="icon">
+              <img src="images/icon_search.png" alt="" />
+            </div>
+            <input class="search" type="text" placeholder="キーワードで探す" />
+            <ul style="display: none" class="tag">
+              <li><a href="#"># 東急</a></li>
+              <li><a href="#"># クレ・ド・ポーボーテ</a></li>
+              <li><a href="#">#スクランブルスクエア</a></li>
+              <li><a href="#">#+Q</a></li>
+              <li><a href="#"># SK-Ⅱ</a></li>
+              <li><a href="#">#ウェルネス</a></li>
+            </ul>
+          </div>
+          <p class="menu">MENU</p>
+          <button
+            class="header__hamburger hamburger"
+            id="js-hamburger"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ハンバーガーメニュー -->
+      <nav class="header__nav nav" id="js-nav">
+        <div class="header__nav_logo">
+          <a href="/"><img src="images/logo-w.png" alt="" /></a>
+        </div>
+        <div class="header__nav_inner">
+          <div class="search_wrap">
+            <img src="images/icon_search01.png" alt="" /><input
+              class="search"
+              type="text"
+              placeholder="キーワードで探す"
+            />
+          </div>
+          <ul class="tag">
+            <li><a href=""># 東急</a></li>
+            <li><a href=""># クレ・ド・ポーボーテ</a></li>
+            <li><a href="">#スクランブルスクエア</a></li>
+            <li><a href="">#+Q</a></li>
+            <li><a href=""># SK-Ⅱ</a></li>
+            <li><a href="">#ウェルネス</a></li>
+          </ul>
+          <h2><a href="">All Articles</a></h2>
+          <h2>Feature</h2>
+          <ul class="header__nav_list">
+            <li><a href="">メイクアップレッスン</a></li>
+            <li><a href="">ビューティーパトロール</a></li>
+          </ul>
+          <h2>Special Issue</h2>
+          <ul class="header__nav_list">
+            <li><a href="">Oz mall × TOKYU DEPARTMENT STORE</a></li>
+            <li><a href="">QUI × TOKYU DEPARTMENT STORE</a></li>
+          </ul>
+          <h2>Service</h2>
+          <ul class="header__nav_list">
+            <li><a href="search.html">ブランド検索 </a></li>
+            <li><a href="/">電話注文</a></li>
+            <li><a href="https://www.tokyu-dept.co.jp/ec/cmShopTopPageI.html">コスメ＆ビューティーネットショッピング</a></li>
+            <li><a href="http://demo.hiup.jp/yatsuda/tokyu-beauty/tokyu-dept.co.jp/ec/cmShopTopPageJ.html">ネットショッピング店頭受け取りサービス</a></li>
+          </ul>
+
+          <ul class="header__nav_sns">
+            <h2>SNS</h2>
+            <li>
+              <a href=""><img src="images/icon_instagram01.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/icon_line01.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+    <div class="l_header__lower">
+      <ul class="breadcrumb">
+        <li><a href="">TOP</a></li>
+        <li><a href="">ブランド一覧</a></li>
+        <li><a href="">Yves Saint Laurent Beauté</a></li>
+      </ul>
+    </div>
+
+    <div id="article" class="article">
+      <div class="inner">
+        <div class="article_fv">
+          <img src="./images/brand01.jpg" alt="">
+        </div>
+        <div class="article_intro">
+          <h1>Yves Saint Laurent Beauté<br><span>(イヴ・サンローラン・ボーテ)</span></h1>
+          <p>「私の作った服を着る女性に顔を与えたい。」これが、1978年に発表されたイヴ・サンローラン・ボーテのコンセプト。<br>鮮烈な色彩、モダンとクラシックの融合を追求し続けるボーテ ラインは多くの女性を魅了しています。<br>
+            さらに、素肌のクチュリエとして、宝石のような輝きに満ちたツヤ肌へ整えるスキンケア ライン、<br>香りをまとう人の個性を生かしながら、魅力を演出するフレグランス。<br>
+            イヴ・サンローランは女性の美しさとエレガンスを追及し、女性の望みを表現し続けています。</p>
+        </div>
+      </div>
+
+      <section class="sec_news" id="sec_news">
+        <h2 class="section_title">News</h2>
+        <p class="section_text">取り扱い店舗からのブランドニュース</p>
+        <!--<div class="search_wrap search_wrap_button">
+          <img src="/tokyudeptbeauty/images/icon_home.png" alt="">
+          <button class="search" type="text">店舗で絞り込む</button>
+          <ul style="display: none" class="panel_inner">
+            <li class="panel_item">
+              <a href="">＋Q（プラスク）ビューティー<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+            </li>
+            <li class="panel_item">
+              <a href="">渋⾕ヒカリエ Shinqs<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+            </li>
+            <li class="panel_item">
+              <a href="">吉祥寺店<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+            </li>
+            <li class="panel_item">
+              <a href="">たまプラーザ店<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+            </li>
+            <li class="panel_item">
+              <a href="">さっぽろ店<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+            </li>
+          </ul>
+        </div>-->
+        <div class="inner">
+          <ul>
+            <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+              <a href="/tama-plaza/news/detail.html?id=156" target="_blank">              
+                <div class="imgbox">
+                  <img src="./images/brand-news01.jpg" alt="">
+                </div>
+                <div class="textbox">
+                  <div class="titlebox">
+                    <div class="icon">
+                      <img src="./images/icon_home01.png" alt="">
+                    </div>
+                    <span class="shop">+Q（プラスク）ビューティー 渋谷スクランブルスクエア店</span>
+                  </div>
+                  <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。 </p>
+                  <div class="lower">
+                    <div class="lower_box">
+                      <span class="day">2023.09.04 Mon - 09.08 Fri</span>
+                      <span class="new">EVENT</span>
+                    </div>
+                    <span class="view">詳細を見る　＞</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+              <a href="/tama-plaza/news/detail.html?id=156" target="_blank">              
+                <div class="imgbox">
+                  <img src="./images/campaign02.jpg" alt="">
+                </div>
+                <div class="textbox">
+                  <div class="titlebox">
+                    <div class="icon">
+                      <img src="./images/icon_home01.png" alt="">
+                    </div>
+                    <span class="shop">渋谷ヒカリエ ShinQs</span>
+                  </div>
+                  <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。 </p>
+                  <div class="lower">
+                    <div class="lower_box">
+                      <span class="day">2023.09.04 Mon - 09.08 Fri</span>
+                      <span class="new">PRESENT</span>
+                    </div>
+                    <span class="view">詳細を見る　＞</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+              <a href="/tama-plaza/news/detail.html?id=156" target="_blank">              
+                <div class="imgbox">
+                  <img src="./images/brand-news01.jpg" alt="">
+                </div>
+                <div class="textbox">
+                  <div class="titlebox">
+                    <div class="icon">
+                      <img src="./images/icon_home01.png" alt="">
+                    </div>
+                    <span class="shop">たまプラーザ店</span>
+                  </div>
+                  <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。 </p>
+                  <div class="lower">
+                    <div class="lower_box">
+                      <span class="day">2023.09.04 Mon - 09.08 Fri</span>
+                      <span class="new">ANNOUNCE</span>
+                    </div>
+                    <span class="view">詳細を見る　＞</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- <section class="sec_new bg_be">
+        <h2 class="section_title">関連記事</h2>
+        <div class="inner">
+          <ul class="c_card__list">
+            <li class="c_card__item">
+              <a href="article.html" class="c_card__link">
+                <div class="imgbox">
+                  <img src="images/new01.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>
+                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                  </h3>
+                  <div class="lower">
+                    <span class="day">2022.12.01</span
+                    ><span class="new">NEW</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="c_card__item">
+              <a href="article.html" class="c_card__link">
+                <div class="imgbox">
+                  <img src="images/new02.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>
+                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                  </h3>
+                  <div class="lower">
+                    <span class="day">2022.12.01</span
+                    ><span class="new">NEW</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="c_card__item">
+              <a href="article.html" class="c_card__link">
+                <div class="imgbox">
+                  <img src="images/new03.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>
+                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                  </h3>
+                  <div class="lower"><span class="day">2022.12.01</span></div>
+                </div>
+              </a>
+            </li>
+            <li class="c_card__item">
+              <a href="article.html" class="c_card__link">
+                <div class="imgbox">
+                  <img src="images/new04.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>
+                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                  </h3>
+                  <div class="lower"><span class="day">2022.12.01</span></div>
+                </div>
+              </a>
+            </li>
+            <li class="c_card__item">
+              <a href="article.html" class="c_card__link">
+                <div class="imgbox">
+                  <img src="images/new05.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>
+                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                  </h3>
+                  <div class="lower"><span class="day">2022.12.01</span></div>
+                </div>
+              </a>
+            </li>
+            <li class="c_card__item">
+              <a href="article.html" class="c_card__link">
+                <div class="imgbox">
+                  <img src="images/new06.jpg" alt="" />
+                </div>
+                <div class="textbox">
+                  <h3>
+                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                  </h3>
+                  <div class="lower"><span class="day">2022.12.01</span></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="btn"><a href="">もっと見る</a></div>
+        </div>
+      </section> -->
+    
+      <section class="sec_shop">
+        <div class="shop_inner">
+        <h2 class="section_title">Shop</h2>
+        <p class="section_text">ブランドお取り扱い店舗</p>
+        <div class="shop_wrapper">
+          <div class="shop_contents">
+            <div class="shop_content">
+              <div class="modal__trigger" data-target="modal01">
+                <div class="icon">
+                  <img src="./images/icon_home01.png" alt="">
+                </div>
+                <p class="store">+Q（プラスク）ビューティー<br>渋谷スクランブルスクエア店</p>
+                <span class="angle">
+                  <img src="./images/tryangle.png" alt="">
+                </span>
+              </div>
+              <div id="modal01" class="modal__wrapper">
+                <div class="modal__layer"></div>
+                <div class="modal__container">
+                  <div class="modal__inner">
+                    <div class="modal__close"></div>
+                    <div class="modal__content">
+                      <div class="modal_image">
+                        <img src="./images/+q.jpg" alt="Yves Saint Laurent Beauté">
+                      </div>
+                      <div class="modal_info">
+                        <p class="title">Yves Saint Laurent Beauté</p>
+                        <p class="sub_title">+Q（プラスク）ビューティー 渋谷スクランブルスクエア店</p>
+                        <table>
+                          <tr>
+                            <td>フロア</td>
+                            <td>6F　+Q（プラスク）ビューティー</td>
+                          </tr>
+                          <tr>
+                            <td>営業時間</td>
+                            <td>10:00~21:00</td>
+                          </tr>
+                          <tr>
+                            <td>電話番号</td>
+                            <td>03-6452-6159</td>
+                          </tr>
+                          <tr>
+                            <td>住所</td>
+                            <td>〒150-0002<br>
+                              東京都渋谷区渋谷２丁目２４−１２<br>
+                              渋谷スクランブルスクエア6F</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shop_content">
+              <div class="modal__trigger" data-target="modal02">
+                <div class="icon">
+                  <img src="./images/icon_home01.png" alt="">
+                </div>
+                <p class="store">渋谷ヒカリエ ShinQs</p>
+                <span class="angle">
+                  <img src="./images/tryangle.png" alt="">
+                </span>
+              </div>
+              <div id="modal02" class="modal__wrapper">
+                <div class="modal__layer"></div>
+                <div class="modal__container">
+                  <div class="modal__inner">
+                    <div class="modal__close"></div>
+                    <div class="modal__content">
+                      <div class="modal_image">
+                        <img src="./images/+q.jpg" alt="Yves Saint Laurent Beauté">
+                      </div>
+                      <div class="modal_info">
+                        <p class="title">Yves テスト Laurent Beauté</p>
+                        <p class="sub_title">+Q（プラスク）ビューティー 渋谷スクランブルスクエア店</p>
+                        <table>
+                          <tr>
+                            <td>フロア</td>
+                            <td>6F　+Q（プラスク）ビューティー</td>
+                          </tr>
+                          <tr>
+                            <td>営業時間</td>
+                            <td>10:00~21:00</td>
+                          </tr>
+                          <tr>
+                            <td>電話番号</td>
+                            <td>03-6452-6159</td>
+                          </tr>
+                          <tr>
+                            <td>住所</td>
+                            <td>〒150-0002<br>
+                              東京都渋谷区渋谷２丁目２４−１２<br>
+                              渋谷スクランブルスクエア6F</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shop_content">
+              <div class="modal__trigger" data-target="modal03">
+                <div class="icon">
+                  <img src="./images/icon_home01.png" alt="">
+                </div>
+                <p class="store">渋谷ヒカリエ ShinQs</p>
+                <span class="angle">
+                  <img src="./images/tryangle.png" alt="">
+                </span>
+              </div>
+              <div id="modal03" class="modal__wrapper">
+                <div class="modal__layer"></div>
+                <div class="modal__container">
+                  <div class="modal__inner">
+                    <div class="modal__close"></div>
+                    <div class="modal__content">
+                      <div class="modal_image">
+                        <img src="./images/+q.jpg" alt="Yves Saint Laurent Beauté">
+                      </div>
+                      <div class="modal_info">
+                        <p class="title">Yves テスト Laurent Beauté</p>
+                        <p class="sub_title">+Q（プラスク）ビューティー 渋谷スクランブルスクエア店</p>
+                        <table>
+                          <tr>
+                            <td>フロア</td>
+                            <td>6F　+Q（プラスク）ビューティー</td>
+                          </tr>
+                          <tr>
+                            <td>営業時間</td>
+                            <td>10:00~21:00</td>
+                          </tr>
+                          <tr>
+                            <td>電話番号</td>
+                            <td>03-6452-6159</td>
+                          </tr>
+                          <tr>
+                            <td>住所</td>
+                            <td>〒150-0002<br>
+                              東京都渋谷区渋谷２丁目２４−１２<br>
+                              渋谷スクランブルスクエア6F</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shop_content">
+              <div class="modal__trigger" data-target="modal04">
+                <div class="icon">
+                  <img src="./images/icon_home01.png" alt="">
+                </div>
+                <p class="store">吉祥寺店</p>
+                <span class="angle">
+                  <img src="./images/tryangle.png" alt="">
+                </span>
+              </div>
+              <div id="modal04" class="modal__wrapper">
+                <div class="modal__layer"></div>
+                <div class="modal__container">
+                  <div class="modal__inner">
+                    <div class="modal__close"></div>
+                    <div class="modal__content">
+                      <div class="modal_image">
+                        <img src="./images/+q.jpg" alt="Yves Saint Laurent Beauté">
+                      </div>
+                      <div class="modal_info">
+                        <p class="title">Yves テスト Laurent Beauté</p>
+                        <p class="sub_title">+Q（プラスク）ビューティー 渋谷スクランブルスクエア店</p>
+                        <table>
+                          <tr>
+                            <td>フロア</td>
+                            <td>6F　+Q（プラスク）ビューティー</td>
+                          </tr>
+                          <tr>
+                            <td>営業時間</td>
+                            <td>10:00~21:00</td>
+                          </tr>
+                          <tr>
+                            <td>電話番号</td>
+                            <td>03-6452-6159</td>
+                          </tr>
+                          <tr>
+                            <td>住所</td>
+                            <td>〒150-0002<br>
+                              東京都渋谷区渋谷２丁目２４−１２<br>
+                              渋谷スクランブルスクエア6F</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shop_content">
+              <div class="modal__trigger" data-target="modal05">
+                <div class="icon">
+                  <img src="./images/icon_home01.png" alt="">
+                </div>
+                <p class="store">たまプラーザ店</p>
+                <span class="angle">
+                  <img src="./images/tryangle.png" alt="">
+                </span>
+              </div>
+              <div id="modal05" class="modal__wrapper">
+                <div class="modal__layer"></div>
+                <div class="modal__container">
+                  <div class="modal__inner">
+                    <div class="modal__close"></div>
+                    <div class="modal__content">
+                      <div class="modal_image">
+                        <img src="./images/+q.jpg" alt="Yves Saint Laurent Beauté">
+                      </div>
+                      <div class="modal_info">
+                        <p class="title">Yves テスト Laurent Beauté</p>
+                        <p class="sub_title">+Q（プラスク）ビューティー 渋谷スクランブルスクエア店</p>
+                        <table>
+                          <tr>
+                            <td>フロア</td>
+                            <td>6F　+Q（プラスク）ビューティー</td>
+                          </tr>
+                          <tr>
+                            <td>営業時間</td>
+                            <td>10:00~21:00</td>
+                          </tr>
+                          <tr>
+                            <td>電話番号</td>
+                            <td>03-6452-6159</td>
+                          </tr>
+                          <tr>
+                            <td>住所</td>
+                            <td>〒150-0002<br>
+                              東京都渋谷区渋谷２丁目２４−１２<br>
+                              渋谷スクランブルスクエア6F</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shop_content">
+              <div class="modal__trigger" data-target="modal06">
+                <div class="icon">
+                  <img src="./images/icon_home01.png" alt="">
+                </div>
+                <p class="store">さっぽろ店</p>
+                <span class="angle">
+                  <img src="./images/tryangle.png" alt="">
+                </span>
+              </div>
+              <div id="modal06" class="modal__wrapper">
+                <div class="modal__layer"></div>
+                <div class="modal__container">
+                  <div class="modal__inner">
+                    <div class="modal__close"></div>
+                    <div class="modal__content">
+                      <div class="modal_image">
+                        <img src="./images/+q.jpg" alt="Yves Saint Laurent Beauté">
+                      </div>
+                      <div class="modal_info">
+                        <p class="title">Yves テスト Laurent Beauté</p>
+                        <p class="sub_title">+Q（プラスク）ビューティー 渋谷スクランブルスクエア店</p>
+                        <table>
+                          <tr>
+                            <td>フロア</td>
+                            <td>6F　+Q（プラスク）ビューティー</td>
+                          </tr>
+                          <tr>
+                            <td>営業時間</td>
+                            <td>10:00~21:00</td>
+                          </tr>
+                          <tr>
+                            <td>電話番号</td>
+                            <td>03-6452-6159</td>
+                          </tr>
+                          <tr>
+                            <td>住所</td>
+                            <td>〒150-0002<br>
+                              東京都渋谷区渋谷２丁目２４−１２<br>
+                              渋谷スクランブルスクエア6F</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shop_content">
+              <div class="modal__trigger" data-target="modal07">
+                <div class="icon">
+                  <img src="./images/icon_home01.png" alt="">
+                </div>
+                <p class="store">+Q（プラスク）ビューティー<br>渋谷スクランブルスクエア店</p>
+                <span class="angle">
+                  <img src="./images/tryangle.png" alt="">
+                </span>
+              </div>
+              <div id="modal07" class="modal__wrapper">
+                <div class="modal__layer"></div>
+                <div class="modal__container">
+                  <div class="modal__inner">
+                    <div class="modal__close"></div>
+                    <div class="modal__content">
+                      <div class="modal_image">
+                        <img src="./images/+q.jpg" alt="Yves Saint Laurent Beauté">
+                      </div>
+                      <div class="modal_info">
+                        <p class="title">Yves Saint Laurent Beauté</p>
+                        <p class="sub_title">+Q（プラスク）ビューティー 渋谷スクランブルスクエア店</p>
+                        <table>
+                          <tr>
+                            <td>フロア</td>
+                            <td>6F　+Q（プラスク）ビューティー</td>
+                          </tr>
+                          <tr>
+                            <td>営業時間</td>
+                            <td>10:00~21:00</td>
+                          </tr>
+                          <tr>
+                            <td>電話番号</td>
+                            <td>03-6452-6159</td>
+                          </tr>
+                          <tr>
+                            <td>住所</td>
+                            <td>〒150-0002<br>
+                              東京都渋谷区渋谷２丁目２４−１２<br>
+                              渋谷スクランブルスクエア6F</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shop_content">
+              <div class="modal__trigger" data-target="modal08">
+                <div class="icon">
+                  <img src="./images/icon_home01.png" alt="">
+                </div>
+                <p class="store">+Q（プラスク）ビューティー<br>渋谷スクランブルスクエア店</p>
+                <span class="angle">
+                  <img src="./images/tryangle.png" alt="">
+                </span>
+              </div>
+              <div id="modal08" class="modal__wrapper">
+                <div class="modal__layer"></div>
+                <div class="modal__container">
+                  <div class="modal__inner">
+                    <div class="modal__close"></div>
+                    <div class="modal__content">
+                      <div class="modal_image">
+                        <img src="./images/+q.jpg" alt="Yves Saint Laurent Beauté">
+                      </div>
+                      <div class="modal_info">
+                        <p class="title">Yves Saint Laurent Beauté</p>
+                        <p class="sub_title">+あああ 渋谷スクランブルスクエア店</p>
+                        <table>
+                          <tr>
+                            <td>フロア</td>
+                            <td>6F　+Q（プラスク）ビューティー</td>
+                          </tr>
+                          <tr>
+                            <td>営業時間</td>
+                            <td>10:00~21:00</td>
+                          </tr>
+                          <tr>
+                            <td>電話番号</td>
+                            <td>03-6452-6159</td>
+                          </tr>
+                          <tr>
+                            <td>住所</td>
+                            <td>〒150-0002<br>
+                              東京都渋谷区渋谷２丁目２４−１２<br>
+                              渋谷スクランブルスクエア6F</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="desc">*店舗名をタップすると店舗の詳細が表示されます</p>
+        <div class="btn"><a href="#">オンラインショップへ</a></div>
+      </div>
+      </section>
+
+      <section class="sec_release">
+        <div class="release_inner">
+          <h2 class="section_title">Release</h2>
+          <p class="section_text">発売商品情報</p>
+          <div class="release_cards">
+            <div class="release_card">
+              <div class="release_date">
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 予約開始</p>
+                </div>
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 発売開始</p>
+                </div>
+              </div>
+              <div class="release_image">
+                <a href="">
+                <img src="./images/release01.jpg" alt="">
+              </a>
+              </div>
+              <div class="release_tags">
+                <a href="" class="tag tag_red">#数量限定</a>
+                <a href="" class="tag tag_blue">#限定商品</a>
+                <a href="" class="tag tag_orange">#長いタイトル</a>
+              </div>
+              <p class="release_title">
+                <span><img src="./images/icon_home01.png" alt=""></span>
+                +Q（プラスク）ビューティー 渋谷スクランブルスクエア店
+              </p>
+              <p class="release_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+              <p class="release_price">
+                税込み<span>10,000</span>円
+              </p>
+              <div class="btn">
+                <a href="">詳細を見る</a>
+              </div>
+            </div>
+            <div class="release_card">
+              <div class="release_date">
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 予約開始</p>
+                </div>
+              </div>
+              <div class="release_image">
+                <a href="">
+                <img src="./images/release01.jpg" alt="">
+              </a>
+              </div>
+              <div class="release_tags">
+                <a href="" class="tag tag_red">#数量限定</a>
+                <a href="" class="tag tag_blue">#限定商品</a>
+              </div>
+              <p class="release_title">
+                <span><img src="./images/icon_home01.png" alt=""></span>
+                渋谷ヒカリエ ShinQs
+              </p>
+              <p class="release_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+              <p class="release_price">
+                税込み<span>10,000</span>円
+              </p>
+              <div class="btn">
+                <a href="">詳細を見る</a>
+              </div>
+            </div>
+            <div class="release_card">
+              <div class="release_date">
+              </div>
+              <div class="release_image">
+                <a href="">
+                <img src="./images/release01.jpg" alt="">
+              </a>
+              </div>
+              <div class="release_tags">
+              </div>
+              <p class="release_title">
+                <span><img src="./images/icon_home01.png" alt=""></span>
+                渋谷ヒカリエ ShinQs
+              </p>
+              <p class="release_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+              <p class="release_price">
+                税込み<span>10,000</span>円
+              </p>
+              <div class="btn">
+                <a href="">詳細を見る</a>
+              </div>
+            </div>
+            <div class="release_card">
+              <div class="release_date">
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 予約開始</p>
+                </div>
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 発売開始</p>
+                </div>
+              </div>
+              <div class="release_image">
+                <a href="">
+                <img src="./images/release01.jpg" alt="">
+              </a>
+              </div>
+              <div class="release_tags">
+                <a href="" class="tag tag_red">#数量限定</a>
+                <a href="" class="tag tag_blue">#限定商品</a>
+                <a href="" class="tag tag_orange">#長いタイトル</a>
+              </div>
+              <p class="release_title">
+                <span><img src="./images/icon_home01.png" alt=""></span>
+                +Q（プラスク）ビューティー 渋谷スクランブルスクエア店
+              </p>
+              <p class="release_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+              <p class="release_price">
+                税込み<span>10,000</span>円
+              </p>
+              <div class="btn">
+                <a href="">詳細を見る</a>
+              </div>
+            </div>
+            <div class="release_card">
+              <div class="release_date">
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 予約開始</p>
+                </div>
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 発売開始</p>
+                </div>
+              </div>
+              <div class="release_image">
+                <a href="">
+                <img src="./images/release01.jpg" alt="">
+              </a>
+              </div>
+              <div class="release_tags">
+                <a href="" class="tag tag_red">#数量限定</a>
+                <a href="" class="tag tag_blue">#限定商品</a>
+                <a href="" class="tag tag_orange">#長いタイトル</a>
+              </div>
+              <p class="release_title">
+                <span><img src="./images/icon_home01.png" alt=""></span>
+                渋谷ヒカリエ ShinQs
+              </p>
+              <p class="release_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+              <p class="release_price">
+                税込み<span>10,000</span>円
+              </p>
+              <div class="btn">
+                <a href="">詳細を見る</a>
+              </div>
+            </div>
+            <div class="release_card">
+              <div class="release_date">
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 予約開始</p>
+                </div>
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 発売開始</p>
+                </div>
+              </div>
+              <div class="release_image">
+                <a href="">
+                <img src="./images/release01.jpg" alt="">
+              </a>
+              </div>
+              <div class="release_tags">
+                <a href="" class="tag tag_red">#数量限定</a>
+                <a href="" class="tag tag_blue">#限定商品</a>
+                <a href="" class="tag tag_orange">#長いタイトル</a>
+              </div>
+              <p class="release_title">
+                <span><img src="./images/icon_home01.png" alt=""></span>
+                渋谷ヒカリエ ShinQs
+              </p>
+              <p class="release_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+              <p class="release_price">
+                税込み<span>10,000</span>円
+              </p>
+              <div class="btn">
+                <a href="">詳細を見る</a>
+              </div>
+            </div>
+            <div class="release_card">
+              <div class="release_date">
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 予約開始</p>
+                </div>
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 発売開始</p>
+                </div>
+              </div>
+              <div class="release_image">
+                <a href="">
+                <img src="./images/release01.jpg" alt="">
+              </a>
+              </div>
+              <div class="release_tags">
+                <a href="" class="tag tag_red">#数量限定</a>
+                <a href="" class="tag tag_blue">#限定商品</a>
+                <a href="" class="tag tag_orange">#長いタイトル</a>
+              </div>
+              <p class="release_title">
+                <span><img src="./images/icon_home01.png" alt=""></span>
+                +Q（プラスク）ビューティー 渋谷スクランブルスクエア店
+              </p>
+              <p class="release_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+              <p class="release_price">
+                税込み<span>10,000</span>円
+              </p>
+              <div class="btn">
+                <a href="">詳細を見る</a>
+              </div>
+            </div>
+            <div class="release_card">
+              <div class="release_date">
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 予約開始</p>
+                </div>
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 発売開始</p>
+                </div>
+              </div>
+              <div class="release_image">
+                <a href="">
+                <img src="./images/release01.jpg" alt="">
+              </a>
+              </div>
+              <div class="release_tags">
+                <a href="" class="tag tag_red">#数量限定</a>
+                <a href="" class="tag tag_blue">#限定商品</a>
+                <a href="" class="tag tag_orange">#長いタイトル</a>
+              </div>
+              <p class="release_title">
+                <span><img src="./images/icon_home01.png" alt=""></span>
+                渋谷ヒカリエ ShinQs
+              </p>
+              <p class="release_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+              <p class="release_price">
+                税込み<span>10,000</span>円
+              </p>
+              <div class="btn">
+                <a href="">詳細を見る</a>
+              </div>
+            </div>
+            <div class="release_card">
+              <div class="release_date">
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 予約開始</p>
+                </div>
+                <div class="date">
+                  <span><img src="./images/icon_calendar.png" alt=""></span>
+                  <p>2023.09.04 Mon AM10:00 発売開始</p>
+                </div>
+              </div>
+              <div class="release_image">
+                <a href="">
+                <img src="./images/release01.jpg" alt="">
+              </a>
+              </div>
+              <div class="release_tags">
+                <a href="" class="tag tag_red">#数量限定</a>
+                <a href="" class="tag tag_blue">#限定商品</a>
+                <a href="" class="tag tag_orange">#長いタイトル</a>
+              </div>
+              <p class="release_title">
+                <span><img src="./images/icon_home01.png" alt=""></span>
+                渋谷ヒカリエ ShinQs
+              </p>
+              <p class="release_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+              <p class="release_price">
+                税込み<span>10,000</span>円
+              </p>
+              <div class="btn">
+                <a href="">詳細を見る</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec_instagram" id="sec_instagram" style="background-color: #fff;">
+        <div class="inner">
+        <h2 class="section_title"><span><img src="./images/Instagram.png" alt=""></span>Instagram<br class="sp"> #Yves Saint Laurent Beauté</h2>
+        <p class="section_text">東急百貨店公式アカウント(@tokyu_dept.beauty)と<br>
+          一般のデパートコスメユーザー様アカウントの<br>
+          Instagram投稿写真を紹介しています。</p>
+          <div class="instagram_image">
+            <picture>
+              <source srcset="./images/Instagram_img.png" media="(min-width: 768px)" type="image/jpg">
+              <img src="./images/Instagram_img_sp.png" alt=””>
+            </picture>
+          </div>
+          <div class="btn sp"><a href="">もっと見る</a></div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  
+  <section class="sec_news" id="sec_news">
+    <h2 class="section_title">Shop News</h2>
+    <p class="section_text">各店舗からのお知らせ</p>
+    <!--<div class="search_wrap search_wrap_button">
+      <img src="/tokyudeptbeauty/images/icon_home.png" alt="">
+      <button class="search" type="text">店舗で絞り込む</button>
+      <ul style="display: none" class="panel_inner">
+        <li class="panel_item">
+          <a href="">＋Q（プラスク）ビューティー<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+        </li>
+        <li class="panel_item">
+          <a href="">渋⾕ヒカリエ Shinqs<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+        </li>
+        <li class="panel_item">
+          <a href="">吉祥寺店<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+        </li>
+        <li class="panel_item">
+          <a href="">たまプラーザ店<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+        </li>
+        <li class="panel_item">
+          <a href="">さっぽろ店<img src="/tokyudeptbeauty/images/arrow-r.png" alt=""></a>
+        </li>
+      </ul>
+    </div>-->
+    <div class="inner">
+      <ul>
+
+      
+        <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+            <a href="/shinqs/shop/popup/detail.html?id=4318" target="_blank">
+            <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/shinqs/shop/popup/images/popup_230728_b1event_04.jpg" alt=""></div>
+            <div class="textbox">
+              <span class="shop">渋谷ヒカリエ ShinQs</span>
+              <p>樹木との共生をテーマにしたスキン＆マインドブランド<br>〈BAUM〉POP UP SHOP </p>
+              <div class="lower">
+                <span class="day">23.07.26</span>
+  
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+          
+          <a href="/shinqs/shop/news/detail.html?id=2866" target="_blank">
+
+            <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/shinqs/shop/news/images/news_230906_styletable_01.jpg" alt=""></div>
+            <div class="textbox">
+
+      <span class="shop">渋谷ヒカリエ ShinQs</span>
+
+              <p>9月16日(土)〈スタイルテーブル〉がイベントを開催<br>〜エシカルワークショップ〜 バスボムをつくろう！ </p>
+              <div class="lower">
+                <span class="day">23.09.06</span>
+  
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+          
+<a href="/shinqs/shop/news/detail.html?id=2884" target="_blank">
+
+            <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/shinqs/shop/news/images/news_230830_aiam_01.jpg" alt=""></div>
+            <div class="textbox">
+
+      <span class="shop">渋谷ヒカリエ ShinQs</span>
+
+              <p>そのとき選んだ香り、それがあなたの人生のワンシーン<br>ビューティーブランド〈アイアム〉NEW OPEN！ </p>
+              <div class="lower">
+                <span class="day">23.08.30</span>
+  
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+          
+<a href="/kichijouji/news/detail.html?id=1456" target="_blank">              
+
+            <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/kichijouji/220928/line_cosmecoupon.jpg" alt=""></div>
+            <div class="textbox">
+
+      <span class="shop">吉祥寺店</span>
+
+              <p>東急百貨店公式LINEアカウント友だち限定 9月のコスメクーポン </p>
+              <div class="lower">
+                <span class="day">23.08.30</span>
+  
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+          
+<a href="/tama-plaza/news/detail.html?id=156" target="_blank">              
+
+            <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/tama-plaza/230914/shop_kindcare.jpg" alt=""></div>
+            <div class="textbox">
+
+      <span class="shop">たまプラーザ店</span>
+
+              <p>〈KINDCARE（カインドケア）〉敬老の日キャンペーン </p>
+              <div class="lower">
+                <span class="day">23.09.10</span>
+  
+                <span class="new">NEW</span>
+  
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+          
+<a href="/sapporo/news/detail.html?id=27" target="_blank">              
+
+            <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/image/20230915_pointup_bn.jpg" alt=""></div>
+            <div class="textbox">
+
+      <span class="shop">さっぽろ店</span>
+
+              <p>【TOKYU CARD ClubQカード会員さま限定】ポイントアップ開催 </p>
+              <div class="lower">
+                <span class="day">23.09.07</span>
+  
+              </div>
+            </div>
+          </a>
+        </li>          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+          
+<a href="/sapporo/news/detail.html?id=910" target="_blank">              
+
+            <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/image/20230801_ikoikocosme400400.jpg" alt=""></div>
+            <div class="textbox">
+
+      <span class="shop">さっぽろ店</span>
+
+              <p>【毎月1日から5日は500円OFFクーポン配信！】ウキウキ イコイコ♪ コスメデイズ </p>
+              <div class="lower">
+                <span class="day">23.07.26</span>
+  
+              </div>
+            </div>
+          </a>
+        </li>          <li class="scroll-fade-up" style="opacity: 1; transform: translateY(0px); transition: all 800ms ease 0s;">
+          
+<a href="/sapporo/news/detail.html?id=911" target="_blank">              
+
+            <div class="imgbox"><img src="https://www.tokyu-dept.co.jp/image/cosme_tokutoku_400.jpg" alt=""></div>
+            <div class="textbox">
+
+      <span class="shop">さっぽろ店</span>
+
+              <p>【毎月19日は1,000円OFFクーポン配信】トクトク コスメ Special Day </p>
+              <div class="lower">
+                <span class="day">23.08.12</span>
+  
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--<div class="btn"><a href="">もっと見る</a></div>-->
+  </section>
+
+  <section class="sec_ranking" id="sec_ranking">
+    <div class="inner">
+    <h2 class="section_title">Online Shop Ranking</h2>
+    <p class="section_text">オンラインショップの人気ランキング</p>
+    <div class="swiper ranking_swiper">
+      <div class="ranking_cards swiper-wrapper">
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <span class="ranking_icon">
+            <img src="./images/ranking01.png" alt="">
+          </span>
+          <p class="ranking_number">1位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <span class="ranking_icon">
+            <img src="./images/ranking02.png" alt="">
+          </span>
+          <p class="ranking_number">2位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <span class="ranking_icon">
+            <img src="./images/ranking03.png" alt="">
+          </span>
+          <p class="ranking_number">3位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">4位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">5位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">6位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">7位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">8位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">9位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">10位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">11位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">12位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+      </div>
+      <div class="ranking_arrow ranking_prev sp">
+        <img src="./images/campaign_prev.png" alt="">
+      </div>
+      <div class="ranking_arrow ranking_next sp">
+        <img src="./images/campaign_next.png" alt="">
+      </div>
+    </div>
+
+    <div class="btn"><a href="">オンラインショップへ</a></div>
+  </div>
+  </section>
+
+    <footer class="l_footer">
+      <div class="inner">
+        <ul>
+          <li>
+            <h3>About</h3>
+            <p>
+              「東急ビューティー」は、スキンケアやベースメイクなどのコスメニュースはもちろん、ビューティーコンサルタントがシェアする旬のメイクアップ術、体と心をていねいに整えるウェルネスアイテムなど、“美と健康”にまつわる情報をお届けするポータルサイト。渋谷スクランブルスクエア6階、渋谷ヒカリエShinQsの最新ショップ情報もご紹介します。
+            </p>
+          </li>
+          <li>
+            <h3>Company</h3>
+            <ul class="l_footer__list">
+              <li class="l_footer__item"><a class="l_footer__link" href="">東急百貨店</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">企業情報</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">プライバシーポリシー</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href=""
+                >TOKYU CARD ClubQに関するお問い合わせ</a
+              ></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">環境問題に関する取り組み</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">お問合わせ</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>
+              <a href=""><img src="images/logo-w.png" alt="" /></a>
+            </h3>
+            <div class="l_footer__sns">
+              <a href=""><img src="images/icon_instagram01.png" alt="" /></a>
+              <a href=""><img src="images/icon_line01.png" alt="" /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div style="display: none;" class="ovartal-search"></div>
+  </body>
+</html>

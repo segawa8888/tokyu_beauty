@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Test_TokyuBeauty</title>
+    <meta name="description" content="TokyuBeauty" />
+    <meta name="keywords" content="東急 TokyuBeauty " />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:site_name" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:url" content="url" /> -->
+    <!-- <meta property="og:title" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:description" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:image" content="ogpのurl" /> -->
+    <!-- <meta name="twitter:card" content="summary"> -->
+    <!-- <meta name="twitter:description" content="TokyuBeauty"> -->
+
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <link rel="canonical" href="url" /> -->
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Noto+Sans+JP:wght@400;700&family=Readex+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+
+    <!-- Adobe Ffonts -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "dio1ogp",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://use.typekit.net/lhj6zpi.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- js -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+      defer
+    ></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/custom.js" defer></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+      .header__nav .header__nav_inner .search_wrap .search {
+          width: 100%;
+          border-bottom: 1px solid #fff;
+          margin-left: 10px;
+          padding-bottom: 10px;
+          color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+  <div class="page">
+    <div class="btt" id="btt"></div>
+    <header class="l_header">
+      <div class="l_header__upper">
+        <div class="l_header__logo">
+          <a href="/">
+            <img src="images/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="l_header__r">
+          <div class="search_wrap">
+            <div class="icon">
+              <img src="images/icon_search.png" alt="" />
+            </div>
+            <input class="search" type="text" placeholder="キーワードで探す" />
+            <ul style="display: none" class="tag">
+              <li><a href="#"># 東急</a></li>
+              <li><a href="#"># クレ・ド・ポーボーテ</a></li>
+              <li><a href="#">#スクランブルスクエア</a></li>
+              <li><a href="#">#+Q</a></li>
+              <li><a href="#"># SK-Ⅱ</a></li>
+              <li><a href="#">#ウェルネス</a></li>
+            </ul>
+          </div>
+          <p class="menu">MENU</p>
+          <button
+            class="header__hamburger hamburger"
+            id="js-hamburger"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ハンバーガーメニュー -->
+      <nav class="header__nav nav" id="js-nav">
+        <div class="header__nav_logo">
+          <a href="/"><img src="images/logo-w.png" alt="" /></a>
+        </div>
+        <div class="header__nav_inner">
+          <div class="search_wrap">
+            <img src="images/icon_search01.png" alt="" /><input
+              class="search"
+              type="text"
+              placeholder="キーワードで探す"
+            />
+          </div>
+          <ul class="tag">
+            <li><a href=""># 東急</a></li>
+            <li><a href=""># クレ・ド・ポーボーテ</a></li>
+            <li><a href="">#スクランブルスクエア</a></li>
+            <li><a href="">#+Q</a></li>
+            <li><a href=""># SK-Ⅱ</a></li>
+            <li><a href="">#ウェルネス</a></li>
+          </ul>
+          <h2><a href="">All Articles</a></h2>
+          <h2>Feature</h2>
+          <ul class="header__nav_list">
+            <li><a href="">メイクアップレッスン</a></li>
+            <li><a href="">ビューティーパトロール</a></li>
+          </ul>
+          <h2>Special Issue</h2>
+          <ul class="header__nav_list">
+            <li><a href="">Oz mall × TOKYU DEPARTMENT STORE</a></li>
+            <li><a href="">QUI × TOKYU DEPARTMENT STORE</a></li>
+          </ul>
+          <h2>Service</h2>
+          <ul class="header__nav_list">
+            <li><a href="search.html">ブランド検索 </a></li>
+            <li><a href="/">電話注文</a></li>
+            <li><a href="https://www.tokyu-dept.co.jp/ec/cmShopTopPageI.html">コスメ＆ビューティーネットショッピング</a></li>
+            <li><a href="http://demo.hiup.jp/yatsuda/tokyu-beauty/tokyu-dept.co.jp/ec/cmShopTopPageJ.html">ネットショッピング店頭受け取りサービス</a></li>
+          </ul>
+
+          <ul class="header__nav_sns">
+            <h2>SNS</h2>
+            <li>
+              <a href=""><img src="images/icon_instagram01.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/icon_line01.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+    <div class="l_header__lower">
+      <ul class="breadcrumb">
+        <li><a href="">TOP</a></li>
+        <li><a href="">ブランド一覧</a></li>
+        <li><a href="">Yves Saint Laurent Beauté</a></li>
+        <li><a href="">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</a></li>
+      </ul>
+    </div>
+
+    <section class="sec_details" id="sec_details">
+      <div class="details_container">
+        <div class="details_inner">
+          <div class="pc">
+            <p class="details_title">
+              <span>
+                <img src="./images/icon_home01.png" alt="">
+              </span>
+              +Q（プラスク）ビューティー 渋谷スクランブルスクエア店
+            </p>
+          </div>
+          <div class="details_contents">
+            <div class="details_content">
+              <div class="details_items swiper">
+                <div class="details_items__wrapper swiper-wrapper">
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/palette.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/palette.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/palette.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/palette.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/palette.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/palette.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                  </div>
+                  <div class="details_items_item swiper-slide">
+                    <img src="./images/palette.png" alt="">
+                  </div>
+                </div>
+                <div class="details_arrow details_prev">
+                  <img src="./images/campaign_prev.png" alt="">
+                </div>
+                <div class="details_arrow details_next">
+                  <img src="./images/campaign_next.png" alt="">
+                </div>
+              </div>
+              <div class="details_thumb_wrapper">
+                <div class="details_thumb details_thumb-active">
+                  <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/palette.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/palette.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/palette.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/palette.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/palette.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/palette.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/Yves Saint Laurent Beauté.png" alt="">
+                </div>
+                <div class="details_thumb">
+                  <img src="./images/palette.png" alt="">
+                </div>
+              </div>
+          </div>
+          <div class="details_info">
+            <div class="details_tags">
+              <a href="" class="tag tag_red">#数量限定</a>
+              <a href="" class="tag tag_blue">#限定商品</a>
+              <a href="" class="tag tag_orange">#長いタイトル</a>
+            </div>
+            <div class="sp">
+              <p class="details_title">
+                <span>
+                  <img src="./images/icon_home01.png" alt="">
+                </span>
+                +Q（プラスク）ビューティー 渋谷スクランブルスクエア店
+              </p>
+            </div>
+            <p class="details_name">Yves Saint Laurent Beauté</p>
+            <p class="details_text">≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL≪イヴ・サンローラン≫モン パリ オーデパルファム 50mL</p>
+            <p class="details_price">税込み<span>10,000</span>円</p>
+            <div class="details_date">
+              <p class="date">2023.09.04 Mon AM10:00 予約開始</p>
+              <p class="date">2023.09.04 Mon AM10:00 発売開始</p>
+            </div>
+            <p class="details_desc">2023年秋、SUQQUはブランド誕生から20周年を迎えます。この節目のときを彩るカラーコレクションのテーマは「多彩」。単なるカラフルには留まらない、数多の色彩が重なり合うことで生まれる美しさ、煌めきを感じるメイクアップ。SUQQUの新たな色彩表現を堪能できるコレクションで、多くの人の“今”を彩ります。どこかクールな印象の限定アイシャドウ パレット2種。美しい色彩のグラデーションに、深い色味のトップコートで仕上げるのがおすすめ。複雑で深みのある目元は、洗練された大人の美を演出します。</p>
+            <div class="btn"><a href="">オンラインショップへ</a></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="sec_instagram" id="sec_instagram" style="background-color: #fff;">
+    <div class="inner">
+    <h2 class="section_title"><span><img src="./images/Instagram.png" alt=""></span>Instagram<br class="sp"> #Yves Saint Laurent Beauté</h2>
+    <p class="section_text">東急百貨店公式アカウント(@tokyu_dept.beauty)と<br>
+      一般のデパートコスメユーザー様アカウントの<br>
+      Instagram投稿写真を紹介しています。</p>
+      <div class="instagram_image">
+        <picture>
+          <source srcset="./images/Instagram_img.png" media="(min-width: 768px)" type="image/jpg">
+          <img src="./images/Instagram_img_sp.png" alt=””>
+        </picture>
+      </div>
+      <div class="btn sp"><a href="">もっと見る</a></div>
+    </div>
+  </section>
+
+
+  <section class="sec_ranking" id="sec_ranking">
+    <div class="inner">
+    <h2 class="section_title">Online Shop Ranking</h2>
+    <p class="section_text">オンラインショップの人気ランキング</p>
+    <div class="swiper ranking_swiper">
+      <div class="ranking_cards swiper-wrapper">
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <span class="ranking_icon">
+            <img src="./images/ranking01.png" alt="">
+          </span>
+          <p class="ranking_number">1位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <span class="ranking_icon">
+            <img src="./images/ranking02.png" alt="">
+          </span>
+          <p class="ranking_number">2位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <span class="ranking_icon">
+            <img src="./images/ranking03.png" alt="">
+          </span>
+          <p class="ranking_number">3位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">4位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">5位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">6位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">7位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">8位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">9位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">10位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">11位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+        <div class="ranking_card swiper-slide">
+          <a href="">
+          <p class="ranking_number">12位</p>
+          <div class="ranking_image">
+            <img src="./images/release01.jpg" alt="">
+          </div>
+          <p class="ranking_title">≪イヴ・サンローラン≫ラディアント タッチ ブラープライマー</p>
+          <p class="ranking_price">税込み<span>10,000</span>円</p>
+        </a>
+        </div>
+      </div>
+      <div class="ranking_arrow ranking_prev sp">
+        <img src="./images/campaign_prev.png" alt="">
+      </div>
+      <div class="ranking_arrow ranking_next sp">
+        <img src="./images/campaign_next.png" alt="">
+      </div>
+    </div>
+    <div class="btn"><a href="">オンラインショップへ</a></div>
+  </div>
+  </section>
+
+    <footer class="l_footer">
+      <div class="inner">
+        <ul>
+          <li>
+            <h3>About</h3>
+            <p>
+              「東急ビューティー」は、スキンケアやベースメイクなどのコスメニュースはもちろん、ビューティーコンサルタントがシェアする旬のメイクアップ術、体と心をていねいに整えるウェルネスアイテムなど、“美と健康”にまつわる情報をお届けするポータルサイト。渋谷スクランブルスクエア6階、渋谷ヒカリエShinQsの最新ショップ情報もご紹介します。
+            </p>
+          </li>
+          <li>
+            <h3>Company</h3>
+            <ul class="l_footer__list">
+              <li class="l_footer__item"><a class="l_footer__link" href="">東急百貨店</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">企業情報</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">プライバシーポリシー</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href=""
+                >TOKYU CARD ClubQに関するお問い合わせ</a
+              ></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">環境問題に関する取り組み</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">お問合わせ</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>
+              <a href=""><img src="images/logo-w.png" alt="" /></a>
+            </h3>
+            <div class="l_footer__sns">
+              <a href=""><img src="images/icon_instagram01.png" alt="" /></a>
+              <a href=""><img src="images/icon_line01.png" alt="" /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div style="display: none;" class="ovartal-search"></div>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Test_TokyuBeauty</title>
+    <meta name="description" content="TokyuBeauty" />
+    <meta name="keywords" content="東急 TokyuBeauty " />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:site_name" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:url" content="url" /> -->
+    <!-- <meta property="og:title" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:description" content="TokyuBeauty" /> -->
+    <!-- <meta property="og:image" content="ogpのurl" /> -->
+    <!-- <meta name="twitter:card" content="summary"> -->
+    <!-- <meta name="twitter:description" content="TokyuBeauty"> -->
+
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <link rel="canonical" href="url" /> -->
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Noto+Sans+JP:wght@400;700&family=Readex+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+
+    <!-- Adobe Ffonts -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "dio1ogp",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://use.typekit.net/lhj6zpi.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- js -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+      defer
+    ></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/custom.js" defer></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+      .header__nav .header__nav_inner .search_wrap .search {
+          width: 100%;
+          border-bottom: 1px solid #fff;
+          margin-left: 10px;
+          padding-bottom: 10px;
+          color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+  <div class="page">
+    <div class="btt" id="btt"></div>
+    <header class="l_header">
+      <div class="l_header__upper">
+        <div class="l_header__logo">
+          <a href="/">
+            <img src="images/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="l_header__r">
+          <div class="search_wrap">
+            <div class="icon">
+              <img src="images/icon_search.png" alt="" />
+            </div>
+            <input class="search" type="text" placeholder="キーワードで探す" />
+            <ul style="display: none" class="tag">
+              <li><a href="#"># 東急</a></li>
+              <li><a href="#"># クレ・ド・ポーボーテ</a></li>
+              <li><a href="#">#スクランブルスクエア</a></li>
+              <li><a href="#">#+Q</a></li>
+              <li><a href="#"># SK-Ⅱ</a></li>
+              <li><a href="#">#ウェルネス</a></li>
+            </ul>
+          </div>
+          <p class="menu">MENU</p>
+          <button
+            class="header__hamburger hamburger"
+            id="js-hamburger"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ハンバーガーメニュー -->
+      <nav class="header__nav nav" id="js-nav">
+        <div class="header__nav_logo">
+          <a href="/"><img src="images/logo-w.png" alt="" /></a>
+        </div>
+        <div class="header__nav_inner">
+          <div class="search_wrap">
+            <img src="images/icon_search01.png" alt="" /><input
+              class="search"
+              type="text"
+              placeholder="キーワードで探す"
+            />
+          </div>
+          <ul class="tag">
+            <li><a href=""># 東急</a></li>
+            <li><a href=""># クレ・ド・ポーボーテ</a></li>
+            <li><a href="">#スクランブルスクエア</a></li>
+            <li><a href="">#+Q</a></li>
+            <li><a href=""># SK-Ⅱ</a></li>
+            <li><a href="">#ウェルネス</a></li>
+          </ul>
+          <h2><a href="">All Articles</a></h2>
+          <h2>Feature</h2>
+          <ul class="header__nav_list">
+            <li><a href="">メイクアップレッスン</a></li>
+            <li><a href="">ビューティーパトロール</a></li>
+          </ul>
+          <h2>Special Issue</h2>
+          <ul class="header__nav_list">
+            <li><a href="">Oz mall × TOKYU DEPARTMENT STORE</a></li>
+            <li><a href="">QUI × TOKYU DEPARTMENT STORE</a></li>
+          </ul>
+          <h2>Service</h2>
+          <ul class="header__nav_list">
+            <li><a href="search.html">ブランド検索 </a></li>
+            <li><a href="/">電話注文</a></li>
+            <li><a href="https://www.tokyu-dept.co.jp/ec/cmShopTopPageI.html">コスメ＆ビューティーネットショッピング</a></li>
+            <li><a href="http://demo.hiup.jp/yatsuda/tokyu-beauty/tokyu-dept.co.jp/ec/cmShopTopPageJ.html">ネットショッピング店頭受け取りサービス</a></li>
+          </ul>
+
+          <ul class="header__nav_sns">
+            <h2>SNS</h2>
+            <li>
+              <a href=""><img src="images/icon_instagram01.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/icon_line01.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+    <div class="l_header__lower">
+      <ul class="breadcrumb">
+        <li><a href="">TOP</a></li>
+        <li><a href="">検索結果</a></li>
+      </ul>
+    </div>
+
+    <section class="sec_search" id="sec_search">
+      <div class="search_inner">
+        <h2 class="section_title">Search Result</h2>
+        <p class="section_text">検索結果一覧</p>
+        <div class="search_wrap">
+          <div class="icon">
+            <img src="images/icon_search.png" alt="" />
+          </div>
+          <input class="search" type="text" placeholder="キーワードで探す" />
+          <ul style="display: none" class="tag">
+            <li><a href="#"># 東急</a></li>
+            <li><a href="#"># クレ・ド・ポーボーテ</a></li>
+            <li><a href="#">#スクランブルスクエア</a></li>
+            <li><a href="#">#+Q</a></li>
+            <li><a href="#"># SK-Ⅱ</a></li>
+            <li><a href="#">#ウェルネス</a></li>
+          </ul>
+        </div>
+        <div class="word">検索キーワード：コスメ</div>
+        <div class="result">一致するページは見つかりませんでした。</div>
+
+      </div>
+    </section>
+
+  </div>
+
+    <footer class="l_footer">
+      <div class="inner">
+        <ul>
+          <li>
+            <h3>About</h3>
+            <p>
+              「東急ビューティー」は、スキンケアやベースメイクなどのコスメニュースはもちろん、ビューティーコンサルタントがシェアする旬のメイクアップ術、体と心をていねいに整えるウェルネスアイテムなど、“美と健康”にまつわる情報をお届けするポータルサイト。渋谷スクランブルスクエア6階、渋谷ヒカリエShinQsの最新ショップ情報もご紹介します。
+            </p>
+          </li>
+          <li>
+            <h3>Company</h3>
+            <ul class="l_footer__list">
+              <li class="l_footer__item"><a class="l_footer__link" href="">東急百貨店</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">企業情報</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">プライバシーポリシー</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href=""
+                >TOKYU CARD ClubQに関するお問い合わせ</a
+              ></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">環境問題に関する取り組み</a></li>
+              <li class="l_footer__item"><a class="l_footer__link" href="">お問合わせ</a></li>
+            </ul>
+          </li>
+          <li>
+            <h3>
+              <a href=""><img src="images/logo-w.png" alt="" /></a>
+            </h3>
+            <div class="l_footer__sns">
+              <a href=""><img src="images/icon_instagram01.png" alt="" /></a>
+              <a href=""><img src="images/icon_line01.png" alt="" /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div style="display: none;" class="ovartal-search"></div>
+  </body>
+</html>

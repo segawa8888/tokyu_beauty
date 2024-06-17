@@ -1,0 +1,19 @@
+$brown: #BA8F2C !default;
+$gray: #707070 !default;
+$bggray: #EBE8E5 !default;
+$red:#CB6D91 !default;
+$blue:#79C9D0 !default;
+$orange:#D09779 !default;
+
+$breakpoints: (
+	'sm': 'screen and (min-width: 376px)',
+	'md': 'screen and (min-width: 768px)',
+	'lg': 'screen and (min-width: 1080px)',
+	'xl': 'screen and (min-width: 1200px)',
+);
+
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
